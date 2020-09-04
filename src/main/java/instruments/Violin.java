@@ -17,4 +17,8 @@ public class Violin extends Instrument {
     public int getStrings() {
         return strings;
     }
+
+    public String play() {
+        return "This is a violin song";
+    }
 }
