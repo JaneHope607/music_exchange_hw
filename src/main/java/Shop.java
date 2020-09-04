@@ -30,4 +30,12 @@ public class Shop {
     public void removeItem(ISell item) {
         this.stock.remove(item);
     }
+
+    public double calculateProfit() {
+        double totalProfit = 0;
+        for (ISell item : this.stock) {
+            totalProfit += item.calculateMarkup();
+        }
+        return totalProfit;
+    }
 }
