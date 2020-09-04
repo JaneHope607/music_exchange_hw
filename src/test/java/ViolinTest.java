@@ -1,2 +1,56 @@
+import instruments.Trumpet;
+import instruments.Violin;
+import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
 public class ViolinTest {
+
+    Violin violin;
+
+    @Before
+    public void before() {
+        violin = new Violin("Strings", "Wood", "Brown", 780.00, 1180.00, "Fiddle");
+    }
+
+    @Test
+    public void canGetType() {
+        assertEquals("Strings", violin.getType());
+    }
+
+    @Test
+    public void canGetMaterial() {
+        assertEquals("Wood", violin.getMaterial());
+    }
+
+    @Test
+    public void canGetColour() {
+        assertEquals("Brown", violin.getColour());
+    }
+
+    @Test
+    public void canGetBuyPrice() {
+        assertEquals(780.00, violin.getBuyPrice(), 0.01);
+    }
+
+    @Test
+    public void canGetSellPrice() {
+        assertEquals(1000.00, violin.getSellPrice(), 0.01);
+    }
+
+    @Test
+    public void canGetTrumpetType() {
+        assertEquals("Fiddle", violin.getViolinType());
+    }
+
+    @Test
+    public void canPlay() {
+        assertEquals("Toot toot toot", violin.play());
+    }
+
+    @Test
+    public void canCalculateMarkup() {
+        assertEquals(450.00, violin.calculateMarkup(), 0.01);
+    }
 }
