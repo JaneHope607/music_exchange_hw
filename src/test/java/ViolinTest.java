@@ -36,7 +36,7 @@ public class ViolinTest {
 
     @Test
     public void canGetSellPrice() {
-        assertEquals(1000.00, violin.getSellPrice(), 0.01);
+        assertEquals(1180.00, violin.getSellPrice(), 0.01);
     }
 
     @Test
@@ -46,11 +46,11 @@ public class ViolinTest {
 
     @Test
     public void canPlay() {
-        assertEquals("Toot toot toot", violin.play());
+        assertEquals("This is a violin song", violin.play());
     }
 
     @Test
     public void canCalculateMarkup() {
-        assertEquals(450.00, violin.calculateMarkup(), 0.01);
+        assertEquals(400.00, violin.calculateMarkup(), 0.01);
     }
 }
