@@ -2,7 +2,12 @@ package instruments;
 
 public class Trumpet extends Instrument {
 
-    public Trumpet(String type, String material, String colour, double buyPrice, double sellPrice) {
+    private String trumpetType;
+    private int numberOfValves;
+
+    public Trumpet(String type, String material, String colour, double buyPrice, double sellPrice, int numberOfValves, String trumpetType) {
         super(type, material, colour, buyPrice, sellPrice);
+        this.numberOfValves = numberOfValves;
+        this.trumpetType = trumpetType;
     }
 }
