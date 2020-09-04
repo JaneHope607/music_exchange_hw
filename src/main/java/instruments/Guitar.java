@@ -19,10 +19,4 @@ public class Guitar extends Instrument implements IPlay, ISell {
     public String play() {
         return "Strum strum";
     }
-
-    @Override
-    public double calculateMarkup() {
-        double totalProfit = getSellPrice() - getBuyPrice();
-        return totalProfit;
-    }
 }
