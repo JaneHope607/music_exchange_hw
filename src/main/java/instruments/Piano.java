@@ -8,4 +8,12 @@ public class Piano extends Instrument {
         super(type, material, colour, buyPrice, sellPrice);
         this.pianoType = pianoType;
     }
+
+    public String getPianoType() {
+        return pianoType;
+    }
+
+    public String play() {
+        return "Keys keys plonk";
+    }
 }
