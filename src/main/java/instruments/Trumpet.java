@@ -10,4 +10,12 @@ public class Trumpet extends Instrument {
         this.numberOfValves = numberOfValves;
         this.trumpetType = trumpetType;
     }
+
+    public String getTrumpetType() {
+        return trumpetType;
+    }
+
+    public int getNumberOfValves() {
+        return numberOfValves;
+    }
 }

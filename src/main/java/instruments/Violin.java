@@ -9,4 +9,12 @@ public class Violin extends Instrument {
         super(type, material, colour, buyPrice, sellPrice);
         this.violinType = violinType;
     }
+
+    public String getViolinType() {
+        return violinType;
+    }
+
+    public int getStrings() {
+        return strings;
+    }
 }

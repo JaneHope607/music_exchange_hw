@@ -15,7 +15,19 @@ public class Shop {
         return this.stock.size();
     }
 
-    public void canAddItem(ISell item) {
+    public ArrayList<ISell> getStock() {
+        return this.stock;
+    }
+
+    public double getTill() {
+        return this.till;
+    }
+
+    public void addItem(ISell item) {
         this.stock.add(item);
+    }
+
+    public void removeItem(ISell item) {
+        this.stock.remove(item);
     }
 }
