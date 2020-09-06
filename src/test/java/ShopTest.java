@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 public class ShopTest {
 
     Shop shop;
-    Guitar guitar;
+    ElectricGuitar electricGuitar;
     Piano piano;
     Violin violin;
     Trumpet trumpet;
@@ -16,7 +16,7 @@ public class ShopTest {
     public void before() {
         shop = new Shop(250.00);
         piano = new Piano(InstrumentType.KEYBOARD, "Wood", "Black", 700.00, 1200.00, "electric");
-        guitar = new Guitar(InstrumentType.STRINGS, "Wood", "Red", 100.00, 150.00, "acoustic");
+        electricGuitar = new ElectricGuitar(InstrumentType.STRINGS, "Wood", "Red", 375.00, 675.00, GuitarType.ELECTRIC);
         trumpet = new Trumpet(InstrumentType.BRASS, "Wood", "Brown", 550.00, 1000.00, 3, "Piccolo");
         violin = new Violin(InstrumentType.STRINGS, "Wood", "Brown", 780.00, 1180.00, "Fiddle");
     }
@@ -33,23 +33,23 @@ public class ShopTest {
 
     @Test
     public void canAddItem() {
-        shop.addItem(guitar);
+        shop.addItem(electricGuitar);
         assertEquals(1, shop.getStockCount());
     }
 
     @Test
     public void canRemoveItem() {
-        shop.addItem(guitar);
-        shop.removeItem(guitar);
+        shop.addItem(electricGuitar);
+        shop.removeItem(electricGuitar);
         assertEquals(0, shop.getStockCount());
     }
 
     @Test
     public void canCalculateProfit() {
-        shop.addItem(guitar);
+        shop.addItem(electricGuitar);
         shop.addItem(piano);
         shop.addItem(violin);
         shop.addItem(trumpet);
-        assertEquals(1400.00, shop.calculateProfit(), 0.01);
+        assertEquals(1650.00, shop.calculateProfit(), 0.01);
     }
 }
