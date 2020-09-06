@@ -1,3 +1,4 @@
+import instruments.InstrumentType;
 import instruments.Piano;
 import instruments.Trumpet;
 import org.junit.Before;
@@ -11,12 +12,12 @@ public class TrumpetTest {
 
     @Before
     public void before() {
-        trumpet = new Trumpet("Brass", "Wood", "Brown", 550.00, 1000.00, 3, "Piccolo");
+        trumpet = new Trumpet(InstrumentType.BRASS, "Wood", "Brown", 550.00, 1000.00, 3, "Piccolo");
     }
 
     @Test
     public void canGetType() {
-        assertEquals("Brass", trumpet.getType());
+        assertEquals(InstrumentType.BRASS, trumpet.getType());
     }
 
     @Test

@@ -1,7 +1,4 @@
-import instruments.Guitar;
-import instruments.Piano;
-import instruments.Trumpet;
-import instruments.Violin;
+import instruments.*;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -18,10 +15,10 @@ public class ShopTest {
     @Before
     public void before() {
         shop = new Shop(250.00);
-        piano = new Piano("Keyboard", "Wood", "Black", 700.00, 1200.00, "electric");
-        guitar = new Guitar("Strings", "Wood", "Red", 100.00, 150.00, "acoustic");
-        trumpet = new Trumpet("Brass", "Wood", "Brown", 550.00, 1000.00, 3, "Piccolo");
-        violin = new Violin("Strings", "Wood", "Brown", 780.00, 1180.00, "Fiddle");
+        piano = new Piano(InstrumentType.KEYBOARD, "Wood", "Black", 700.00, 1200.00, "electric");
+        guitar = new Guitar(InstrumentType.STRINGS, "Wood", "Red", 100.00, 150.00, "acoustic");
+        trumpet = new Trumpet(InstrumentType.BRASS, "Wood", "Brown", 550.00, 1000.00, 3, "Piccolo");
+        violin = new Violin(InstrumentType.STRINGS, "Wood", "Brown", 780.00, 1180.00, "Fiddle");
     }
 
     @Test
