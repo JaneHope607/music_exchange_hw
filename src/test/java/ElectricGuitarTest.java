@@ -52,6 +52,6 @@ public class ElectricGuitarTest {
 
     @Test
     public void canCalculateMarkup() {
-        assertEquals(500.00, electricGuitar.calculateMarkup(), 0.01);
+        assertEquals(300.00, electricGuitar.calculateMarkup(), 0.01);
     }
 }
